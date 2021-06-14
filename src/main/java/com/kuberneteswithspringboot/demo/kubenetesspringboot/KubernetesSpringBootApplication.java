@@ -20,7 +20,7 @@ public class KubernetesSpringBootApplication {
 
 	@GetMapping("/")
 	public String index() throws IOException {
-		String returnString= "Spring Boot App v1"+ appVersion;
+		String returnString= "Spring Boot App v2"+ appVersion;
 		String cmd = "cat /proc/self/cgroup | grep name";
 		Runtime run = Runtime.getRuntime();
 		Process pr = run.exec(cmd);
