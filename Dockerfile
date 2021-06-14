@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 LABEL maintainer="pulkit.pushkarna@gmail.com"
-LABEL version="v1"
+LABEL version="v2"
 
 RUN apt-get update && apt-get install -y openjdk-8-jdk
 
