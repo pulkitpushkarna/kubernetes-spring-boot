@@ -8,5 +8,5 @@ metadata:
 spec:
   containers:
     - name: webapp
-      image: pulkitpushkarna/spring-boot-app-v1
+      image: pulkitpushkarna/kubernetes-with-spring-boot:v2
         

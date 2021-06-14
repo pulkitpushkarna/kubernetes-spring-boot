@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: my-spring-boot-app
-          image: pulkitpushkarna/spring-boot-app:v2
+          image: pulkitpushkarna/kubernetes-with-spring-boot:v2
           ports:
             - containerPort: 8080
