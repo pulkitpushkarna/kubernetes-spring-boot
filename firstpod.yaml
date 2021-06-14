@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: firstpod
+  labels:
+    app: fp
+    release: stable
+spec:
+  containers:
+    - name: webapp
+      image: pulkitpushkarna/spring-boot-app-v1
+        
