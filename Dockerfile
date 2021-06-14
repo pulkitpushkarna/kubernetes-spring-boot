@@ -9,4 +9,4 @@ WORKDIR /usr/local/bin
 
 COPY build/libs/app2.jar .
 
-ENTRYPOINT ["java","-jar","app2.jar"]
+ENTRYPOINT ["java","-jar","kubenetes-spring-boot-0.0.1-SNAPSHOT.jar"]
