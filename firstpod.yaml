@@ -5,6 +5,9 @@ metadata:
   labels:
     app: fp
     release: stable
+  annotations:
+    dockerHubUrl: "https://github.com/pulkitpushkarna/kubernetes-spring-boot.git"
+    logDir: "etc/logs"
 spec:
   containers:
     - name: webapp
