@@ -27,11 +27,16 @@ spec:
           volumeMounts:
             - name: demovol
               mountPath: /data
+            - name: config-map-vol
+              mountPath: /etc/config
       volumes:
         - name: demovol
           hostPath:
             path: /data
             type: Directory
+        - name: config-map-vol
+          configMap:
+            name: demo-configmap
 
 
 
