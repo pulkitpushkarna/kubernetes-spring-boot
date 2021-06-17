@@ -31,6 +31,8 @@ spec:
               mountPath: /etc/config
             - name: my-secret
               mountPath: /etc/mysecrets
+            - name: cache-volume
+              mountPath: /cache
       volumes:
         - name: demovol
           hostPath:
@@ -42,5 +44,7 @@ spec:
         - name: my-secret
           secret:
             secretName: demo-secret
+        - name: cache-volume
+          emptyDir: {}
 
 
