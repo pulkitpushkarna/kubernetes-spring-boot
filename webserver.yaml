@@ -24,3 +24,14 @@ spec:
           image: pulkitpushkarna/kubernetes-with-spring-boot:v2
           ports:
             - containerPort: 8080
+          volumeMounts:
+            - name: demovol
+              mountPath: /data
+      volumes:
+        - name: demovol
+          hostPath:
+            path: /data
+            type: Directory
+
+
+
