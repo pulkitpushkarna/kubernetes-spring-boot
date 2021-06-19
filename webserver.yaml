@@ -25,8 +25,8 @@ spec:
           ports:
             - containerPort: 8080
           volumeMounts:
-            - name: demovol
-              mountPath: /data
+#            - name: demovol
+#              mountPath: /data
             - name: config-map-vol
               mountPath: /etc/config
             - name: my-secret
@@ -36,10 +36,10 @@ spec:
             - name: demo-pvc
               mountPath: /clusterVol
       volumes:
-        - name: demovol
-          hostPath:
-            path: /data
-            type: Directory
+#        - name: demovol
+#          hostPath:
+#            path: /data
+#            type: Directory
         - name: config-map-vol
           configMap:
             name: demo-configmap
