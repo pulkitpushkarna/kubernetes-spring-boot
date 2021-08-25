@@ -16,10 +16,8 @@ spec:
         app: hello-world-rest-api
     spec:
       containers:
-        - image: in28min/hello-world-rest-api:0.0.1.RELEASE
+        - image: pulkitpushkarna/kubernetes-with-spring-boot:v1
           imagePullPolicy: IfNotPresent
           name: hello-world-rest-api
           ports:
-            - name: liveness-port
-              containerPort: 8080
-              hostPort: 8080
+            - containerPort: 8080
