@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-world-rest-api
+  name: hello-world-rest-api
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-rest-api
+  template:
+    metadata:
+      labels:
+        app: hello-world-rest-api
+    spec:
+      containers:
+        - image: in28min/hello-world-rest-api:0.0.1.RELEASE
+          imagePullPolicy: IfNotPresent
+          name: hello-world-rest-api
+          ports:
+            - name: liveness-port
+              containerPort: 8080
+              hostPort: 8080
