@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hello-world-rest-api
-  name: hello-world-rest-api
+    app: student-rest-api
+  name: student-rest-api
   namespace: default
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: hello-world-rest-api
+      app: student-rest-api
   template:
     metadata:
       labels:
-        app: hello-world-rest-api
+        app: student-rest-api
     spec:
       containers:
-        - image: pulkitpushkarna/kubernetes-with-spring-boot:v1
+        - image: pulkitpushkarna/student-microservice
           imagePullPolicy: IfNotPresent
-          name: hello-world-rest-api
+          name: student-rest-api
           ports:
             - containerPort: 8080
