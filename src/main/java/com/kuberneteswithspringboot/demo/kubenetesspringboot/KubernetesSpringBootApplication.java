@@ -21,7 +21,7 @@ public class KubernetesSpringBootApplication {
 	@GetMapping("/")
 	public String index() throws IOException {
 		String returnString= "Spring Boot App "+ appVersion;
-		String cmd = "cat /proc/self/cgroup | grep name";
+		String cmd = "cat /proc/self/mountinfo | grep /docker/containers/";
 		Runtime run = Runtime.getRuntime();
 		Process pr = run.exec(cmd);
 		try {
